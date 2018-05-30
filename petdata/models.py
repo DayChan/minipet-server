@@ -8,15 +8,18 @@ class User(models.Model):
     pass
 
 class Pet(models.Model):
-    pet = models.IntegerField(primary_key=True)
+    id = models.IntegerField(primary_key=True)
+    pet_name = models.CharField(max_length = 100)
     user_list = models.ForeignKey(User)
 
 class Pet_State(models.Model):
-     pet_id = models.ForeignKey(Pet)
-     pet_clean = models.IntegerField()
-     pet_hunger = models.IntegerField() 
+    id = models.IntegerField(primary_key=True)
+    pet_id = models.ForeignKey(Pet)
+    pet_clean = models.IntegerField()
+    pet_hunger = models.IntegerField() 
 
 class Goods_table(models.Model):
+    id = models.IntegerField(primary_key=True)
     user_info = models.ForeignKey(User)
     cookies = models.BooleanField() 
     soap = models.BooleanField()
