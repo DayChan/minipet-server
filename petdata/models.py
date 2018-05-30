@@ -16,8 +16,7 @@ class Pet_State(models.Model):
      pet_clean = models.IntegerField()
      pet_hunger = models.IntegerField() 
 
-class goods_table(models.Model):
+class Goods_table(models.Model):
     user_info = models.ForeignKey(User)
     cookies = models.BooleanField() 
     soap = models.BooleanField()
-    
