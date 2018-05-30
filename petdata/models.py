@@ -21,7 +21,7 @@ class Pet_State(models.Model):
     pet_hunger = models.IntegerField()
 
     def __str__(self):
-        return '<Pet_state %s %s %s>' %(self.pet.pet_name.self.pet_clean,self.pet_hunger)
+        return '<Pet_state %s %s %s>' %(self.pet,self.pet_clean,self.pet_hunger)
 
 class Goods(models.Model):
     id = models.IntegerField(primary_key=True)
